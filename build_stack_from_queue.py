@@ -3,19 +3,16 @@
 Stack1 = []
 Stack2 = []
 
-# implement enqueue method by using only stacks
-# and the append and pop functions
+# build a stack using append function
 def build_stack(element):
   Stack1.append(element)
   
-# implement dequeue method by pushing all elements
-# from stack 1 into stack 2, which reverses the order
-# and then popping from stack 2
+# push all elements from stack 1 into stack 2, to revers the order
 def queue():
   if len(Stack2) == 0:
     if len(Stack1) == 0:
       return 'Cannot dequeue because queue is empty'
-    while len(Stack1) > 0:
+    while len(Stack1) > 0: # pop from stack 2
       p = Stack1.pop()
       Stack2.append(p)
   return Stack2.pop()
